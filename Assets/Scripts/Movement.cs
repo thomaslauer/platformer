@@ -20,7 +20,7 @@ public class Movement : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         float verticalInput = Input.GetAxis("Vertical");
         float horizontalInput = Input.GetAxis("Horizontal");
@@ -36,7 +36,7 @@ public class Movement : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space) && isTouchingGround)
         {
             jumpSpeed = force;
-            
+            print("jump");
         }
         float horizontalSpeed = horizontalInput * movementSpeed;
 
